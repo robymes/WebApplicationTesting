@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="libs" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="jQuery" />
+      <option name="frameworkVersion" value="1.1." />
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/libs/postal-0.10.0.js" />
+        <item url="file://$PROJECT_DIR$/libs/jasmine-2.0.js" />
+        <item url="file://$PROJECT_DIR$/libs/jquery-1.11.1.js" />
+        <item url="file://$PROJECT_DIR$/libs/bootstrap.js" />
+        <item url="file://$PROJECT_DIR$/libs/knockout-3.1.0.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/libs/jasmine-2.0.js" />
+      <root url="file://$PROJECT_DIR$/libs/postal-0.10.0.js" />
+      <root url="file://$PROJECT_DIR$/libs/jquery-1.11.1.js" />
+      <root url="file://$PROJECT_DIR$/libs/bootstrap.js" />
+      <root url="file://$PROJECT_DIR$/libs/knockout-3.1.0.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

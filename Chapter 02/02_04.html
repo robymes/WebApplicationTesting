@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hello Knockout.JS</title>
+</head>
+<body>
+    <table border="1" cellpadding="2">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Book</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach: books">
+        <tr>
+            <td data-bind="text: $index() + 1"></td>
+            <td data-bind="text: $data"></td>
+            <td>
+                <input type="button" data-bind="click: $parent.addToCart" value="Add to Cart" />
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+    <script type="text/javascript">
+        var ViewModel = function () {
+            this.books = ko.observable([
+                "Patterns of Enterprise Application Architecture",
+                "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+                "Microsoft .net: Architecting Applications for the Enterprise"]);
+            this.addToCart = function (data) {
+                alert(data + " added to Cart");
+            };
+        };
+        ko.applyBindings(new ViewModel());
+    </script>
+</body>
+</html>

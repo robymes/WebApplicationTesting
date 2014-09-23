@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery UI Slider</title>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+</head>
+<body>
+    <p>
+        <span>Slider value:</span>
+        &nbsp;
+        <span id="sliderValue"></span>
+        &nbsp;
+        <button id="sliderReset">Reset</button>
+    </p>
+    <div id="slider"></div>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        jQuery("#slider").slider({
+            value: 100,
+            min: 0,
+            max: 500,
+            step: 50,
+            slide: function (event, ui) {
+                jQuery("#sliderValue")
+                    .text(ui.value );
+            }
+        });
+        jQuery("#sliderValue")
+            .text(jQuery("#slider")
+            .slider("value"));
+        jQuery("#sliderReset").on("click", function () {
+            jQuery("#slider").slider({
+                value: 100
+            });
+            jQuery("#sliderValue")
+                .text(jQuery("#slider")
+                .slider("value"));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Hello Knockout.JS</title>
+</head>
+<body>
+    <span>Type a message:&nbsp;</span>
+    <input type="text" data-bind="value: message" />
+    <button data-bind="click: submitMessage">Click me</button>
+    <br />
+    <span data-bind="text: summary"></span>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+    <script type="text/javascript">
+        var ViewModel = function () {
+            this.message = ko.observable("");
+            this.summary = ko.observable("");
+            this.submitMessage = function () {
+                this.summary("You typed: " + this.message());
+            };
+        };
+        var viewModel = new ViewModel();
+        ko.applyBindings(viewModel);
+    </script>
+</body>
+</html>
